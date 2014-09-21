@@ -1,7 +1,7 @@
 objav01
 =======
 
-Basic Object Avoidance Program - Jade Robot moves forwards, but if there is something to the front left, it turns to the right.
+Basic Scratch Object Avoidance Program - Jade Robot moves forwards, but if there is something to the front left, it turns to the right.
 
 ### Project Information
 ```
