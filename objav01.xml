@@ -52,7 +52,11 @@
           </block>
         </statement>
         <statement name="ELSE">
-          <block type="movement_forward" id="8"></block>
+          <block type="movement_forward" id="8">
+            <next>
+              <block type="oled_cleardisplay" id="145"></block>
+            </next>
+          </block>
         </statement>
         <next>
           <block type="robot_delay" id="9" inline="true">
