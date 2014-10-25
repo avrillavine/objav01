@@ -1,4 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="movement_left" id="195" x="-139" y="-116"></block>
   <block type="controls_whileUntil" id="1" inline="false" x="-29" y="-111">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
@@ -65,6 +66,60 @@
                 <field name="NUM">250</field>
               </block>
             </value>
+            <next>
+              <block type="controls_if" id="162" inline="false">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="176" inline="true">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="math_number" id="177">
+                        <field name="NUM">30</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="sensor_light" id="175">
+                        <field name="LIGHT">RIGHT</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_left" id="215">
+                    <next>
+                      <block type="oled_cleardisplay" id="216">
+                        <next>
+                          <block type="oled_setcursor" id="217" inline="true">
+                            <value name="STARTX">
+                              <block type="math_number" id="218">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                            <value name="STARTY">
+                              <block type="math_number" id="219">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="oled_drawtext" id="220">
+                                <field name="TEXT">Too bright</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="movement_forward" id="221">
+                    <next>
+                      <block type="oled_cleardisplay" id="222"></block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
           </block>
         </next>
       </block>
