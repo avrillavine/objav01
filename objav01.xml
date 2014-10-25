@@ -25,7 +25,31 @@
           </block>
         </value>
         <statement name="DO0">
-          <block type="movement_right" id="7"></block>
+          <block type="movement_right" id="7">
+            <next>
+              <block type="oled_cleardisplay" id="58">
+                <next>
+                  <block type="oled_setcursor" id="85" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="86">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="87">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_drawtext" id="67">
+                        <field name="TEXT">Leave me alone</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
         </statement>
         <statement name="ELSE">
           <block type="movement_forward" id="8"></block>
