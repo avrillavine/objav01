@@ -29,7 +29,7 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block type="movement_right" id="7">
+                  <block type="movement_left" id="53">
                     <next>
                       <block type="oled_cleardisplay" id="8">
                         <next>
