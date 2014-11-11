@@ -7,116 +7,120 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="controls_if" id="3" inline="false">
-        <mutation else="1"></mutation>
-        <value name="IF0">
-          <block type="logic_compare" id="4" inline="true">
-            <field name="OP">GT</field>
-            <value name="A">
-              <block type="math_number" id="5">
-                <field name="NUM">30</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="sensor_object" id="6">
-                <field name="OBJECT">LEFTFRONT</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO0">
-          <block type="movement_right" id="7">
-            <next>
-              <block type="oled_cleardisplay" id="8">
-                <next>
-                  <block type="oled_setcursor" id="9" inline="true">
-                    <value name="STARTX">
-                      <block type="math_number" id="10">
-                        <field name="NUM">1</field>
-                      </block>
-                    </value>
-                    <value name="STARTY">
-                      <block type="math_number" id="11">
-                        <field name="NUM">1</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="oled_drawtext" id="12">
-                        <field name="TEXT">Leave me alone</field>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-        <statement name="ELSE">
-          <block type="movement_forward" id="13">
-            <next>
-              <block type="oled_cleardisplay" id="14"></block>
-            </next>
-          </block>
-        </statement>
+      <block type="movement_forward" id="30">
         <next>
-          <block type="robot_delay" id="15" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="16">
-                <field name="NUM">250</field>
-              </block>
-            </value>
-            <next>
-              <block type="controls_if" id="17" inline="false">
-                <mutation else="1"></mutation>
-                <value name="IF0">
-                  <block type="logic_compare" id="18" inline="true">
-                    <field name="OP">GT</field>
-                    <value name="A">
-                      <block type="math_number" id="19">
-                        <field name="NUM">30</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="sensor_light" id="20">
-                        <field name="LIGHT">RIGHT</field>
-                      </block>
-                    </value>
+          <block type="controls_if" id="3" inline="false">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="4" inline="true">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="math_number" id="5">
+                    <field name="NUM">30</field>
                   </block>
                 </value>
-                <statement name="DO0">
-                  <block type="movement_left" id="21">
+                <value name="B">
+                  <block type="sensor_object" id="6">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_right" id="7">
+                <next>
+                  <block type="oled_cleardisplay" id="8">
                     <next>
-                      <block type="oled_cleardisplay" id="22">
+                      <block type="oled_setcursor" id="9" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="10">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="11">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
                         <next>
-                          <block type="oled_setcursor" id="23" inline="true">
-                            <value name="STARTX">
-                              <block type="math_number" id="24">
-                                <field name="NUM">1</field>
-                              </block>
-                            </value>
-                            <value name="STARTY">
-                              <block type="math_number" id="25">
-                                <field name="NUM">1</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="oled_drawtext" id="26">
-                                <field name="TEXT">Too bright</field>
-                              </block>
-                            </next>
+                          <block type="oled_drawtext" id="12">
+                            <field name="TEXT">Leave me alone</field>
                           </block>
                         </next>
                       </block>
                     </next>
                   </block>
-                </statement>
-                <statement name="ELSE">
-                  <block type="movement_forward" id="27">
-                    <next>
-                      <block type="oled_cleardisplay" id="28"></block>
-                    </next>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="movement_forward" id="13">
+                <next>
+                  <block type="oled_cleardisplay" id="14"></block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="robot_delay" id="15" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="16">
+                    <field name="NUM">250</field>
                   </block>
-                </statement>
+                </value>
+                <next>
+                  <block type="controls_if" id="17" inline="false">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="18" inline="true">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="math_number" id="19">
+                            <field name="NUM">30</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="sensor_light" id="20">
+                            <field name="LIGHT">RIGHT</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="movement_left" id="21">
+                        <next>
+                          <block type="oled_cleardisplay" id="22">
+                            <next>
+                              <block type="oled_setcursor" id="23" inline="true">
+                                <value name="STARTX">
+                                  <block type="math_number" id="24">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <value name="STARTY">
+                                  <block type="math_number" id="25">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="oled_drawtext" id="26">
+                                    <field name="TEXT">Too bright</field>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="movement_forward" id="27">
+                        <next>
+                          <block type="oled_cleardisplay" id="28"></block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
